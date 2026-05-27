@@ -1,0 +1,157 @@
+[
+  {
+    "id": "fb-001",
+    "processId": "proc-001",
+    "fromEmployee": "emp-001",
+    "toEmployee": "emp-004",
+    "date": "2024-10-15",
+    "status": "completed",
+    "collaborationScore": 4,
+    "selfRating": 4,
+    "selfAssessment": "Ich denke, ich konnte Markus gut bei der Einarbeitung unterstuetzen und habe versucht, mein Wissen offen zu teilen.",
+    "hrSharingReason": "",
+    "answers": [
+      { "questionId": "q1", "rating": 4 },
+      { "questionId": "q2", "rating": 3 },
+      { "questionId": "q3", "text": "Markus ist sehr wissbegierig und stellt die richtigen Fragen. Er hat sich schnell in unsere Architektur eingearbeitet." },
+      { "questionId": "q4", "text": "Code-Reviews könnten gründlicher werden. Mehr Fokus auf Testing wäre gut." },
+      { "questionId": "q5", "rating": 4 },
+      { "questionId": "q6", "rating": 3 }
+    ]
+  },
+  {
+    "id": "fb-002",
+    "processId": "proc-001",
+    "fromEmployee": "emp-002",
+    "toEmployee": "emp-004",
+    "date": "2024-10-18",
+    "status": "completed",
+    "collaborationScore": 3,
+    "selfRating": null,
+    "selfAssessment": "",
+    "hrSharingReason": "Ich moechte sicherstellen, dass HR die positiven Aspekte von Markus' Onboarding mitbekommt, da er wirklich Potenzial zeigt.",
+    "answers": [
+      { "questionId": "q1", "rating": 5 },
+      { "questionId": "q2", "rating": 4 },
+      { "questionId": "q3", "text": "Sehr gute Teamfähigkeit und positive Einstellung. Bringt frische Ideen ein." },
+      { "questionId": "q4", "text": "Sollte sich mehr mit unseren CI/CD-Prozessen vertraut machen." },
+      { "questionId": "q5", "rating": 5 },
+      { "questionId": "q6", "rating": 3 }
+    ]
+  },
+  {
+    "id": "fb-003",
+    "processId": "proc-001",
+    "fromEmployee": "emp-006",
+    "toEmployee": "emp-004",
+    "date": "",
+    "status": "pending",
+    "collaborationScore": null,
+    "selfRating": null,
+    "selfAssessment": "",
+    "hrSharingReason": "",
+    "answers": []
+  },
+  {
+    "id": "fb-004",
+    "processId": "proc-001",
+    "fromEmployee": "emp-007",
+    "toEmployee": "emp-004",
+    "date": "",
+    "status": "pending",
+    "collaborationScore": null,
+    "selfRating": null,
+    "selfAssessment": "",
+    "hrSharingReason": "",
+    "answers": []
+  },
+  {
+    "id": "fb-005",
+    "processId": "proc-002",
+    "fromEmployee": "emp-002",
+    "toEmployee": "emp-001",
+    "date": "2024-10-01",
+    "status": "completed",
+    "collaborationScore": 5,
+    "selfRating": 4,
+    "selfAssessment": "Ich arbeite sehr eng mit Anna zusammen und schaetze ihre technische Kompetenz. Mein Feedback basiert auf taeglicher Zusammenarbeit.",
+    "hrSharingReason": "Das Feedback enthaelt Details zu Fuehrungsqualitaeten, die HR fuer die Befoerderungsentscheidung kennen sollte.",
+    "answers": [
+      { "questionId": "q1", "rating": 5 },
+      { "questionId": "q2", "rating": 4 },
+      { "questionId": "q3", "text": "Anna hat beim letzten Sprint eigenständig ein komplexes Refactoring geleitet und das Team koordiniert." },
+      { "questionId": "q4", "rating": 4 },
+      { "questionId": "q5", "rating": 5 }
+    ]
+  },
+  {
+    "id": "fb-006",
+    "processId": "proc-002",
+    "fromEmployee": "emp-003",
+    "toEmployee": "emp-001",
+    "date": "2024-10-05",
+    "status": "completed",
+    "collaborationScore": 2,
+    "selfRating": null,
+    "selfAssessment": "",
+    "hrSharingReason": "",
+    "answers": [
+      { "questionId": "q1", "rating": 4 },
+      { "questionId": "q2", "rating": 5 },
+      { "questionId": "q3", "text": "Im Design-Review bringt Anna immer wertvolle technische Perspektiven ein und schlägt innovative Lösungen vor." },
+      { "questionId": "q4", "rating": 5 },
+      { "questionId": "q5", "rating": 5 }
+    ]
+  },
+  {
+    "id": "fb-007",
+    "processId": "proc-002",
+    "fromEmployee": "emp-005",
+    "toEmployee": "emp-001",
+    "date": "2024-10-08",
+    "status": "completed",
+    "collaborationScore": 4,
+    "selfRating": 5,
+    "selfAssessment": "Ich bin ueberzeugt, dass Anna eine der staerksten technischen Fuehrungskraefte im Team ist.",
+    "hrSharingReason": "Moechte sicherstellen, dass Annas Beitrag zur Architektur-Entscheidung von HR anerkannt wird.",
+    "answers": [
+      { "questionId": "q1", "rating": 5 },
+      { "questionId": "q2", "rating": 5 },
+      { "questionId": "q3", "text": "Anna hat bei der Architektur-Entscheidung für das neue Microservice-Setup proaktiv alle Stakeholder einbezogen." },
+      { "questionId": "q4", "rating": 5 },
+      { "questionId": "q5", "rating": 5 }
+    ]
+  },
+  {
+    "id": "fb-008",
+    "processId": "proc-002",
+    "fromEmployee": "emp-006",
+    "toEmployee": "emp-001",
+    "date": "2024-10-12",
+    "status": "completed",
+    "collaborationScore": 3,
+    "selfRating": null,
+    "selfAssessment": "",
+    "hrSharingReason": "Ich bin unsicher, ob mein Feedback direkt gut ankommen wuerde, und moechte, dass HR es im richtigen Kontext weitergibt.",
+    "answers": [
+      { "questionId": "q1", "rating": 4 },
+      { "questionId": "q2", "rating": 4 },
+      { "questionId": "q3", "text": "Anna nimmt sich immer Zeit für Code-Reviews und gibt konstruktives Feedback." },
+      { "questionId": "q4", "rating": 4 },
+      { "questionId": "q5", "rating": 4 }
+    ]
+  },
+  {
+    "id": "fb-009",
+    "processId": "proc-002",
+    "fromEmployee": "emp-007",
+    "toEmployee": "emp-001",
+    "date": "",
+    "status": "pending",
+    "collaborationScore": null,
+    "selfRating": null,
+    "selfAssessment": "",
+    "hrSharingReason": "",
+    "answers": []
+  }
+]

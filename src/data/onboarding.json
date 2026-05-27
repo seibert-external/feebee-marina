@@ -1,0 +1,216 @@
+[
+  {
+    "id": "onb-001",
+    "newbie": "emp-004",
+    "fachLotse": "emp-007",
+    "kulturLotse": "emp-008",
+    "deciderGroup": ["emp-002", "emp-005"],
+    "personal": "emp-008",
+    "startDate": "2024-09-01",
+    "status": "active",
+    "currentPhase": 4,
+    "phases": [
+      {
+        "id": "phase-1",
+        "name": "KickOff mit Personal",
+        "shortName": "KickOff",
+        "timing": "Tag 1",
+        "week": 0,
+        "status": "completed",
+        "completedDate": "2024-09-01",
+        "description": "Erster Arbeitstag: Begruessung und organisatorische Einfuehrung durch Personal.",
+        "activities": [
+          { "text": "Organisatorische Einfuehrung", "responsible": "personal", "done": true },
+          { "text": "Arbeitsplatz & Tools einrichten", "responsible": "personal", "done": true },
+          { "text": "Vorstellung im Team", "responsible": "personal", "done": true }
+        ],
+        "notes": "Markus wurde herzlich empfangen. Alle Tools waren vorbereitet."
+      },
+      {
+        "id": "phase-2",
+        "name": "Kennenlerngespraech & Erwartungsabgleich",
+        "shortName": "Kennenlernen",
+        "timing": "Erste 2 Wochen",
+        "week": 2,
+        "status": "completed",
+        "completedDate": "2024-09-13",
+        "description": "Kennenlerngespraech mit fachlichem Lotsen. Erwartungsabgleich zwischen Newbie, Decider Group und kulturellem Lotsen.",
+        "activities": [
+          { "text": "Kennenlerngespraech fachlicher Lotse", "responsible": "fachLotse", "done": true },
+          { "text": "Erwartungsabgleich: Wie sieht das Onboarding aus?", "responsible": "kulturLotse", "done": true },
+          { "text": "Was wollen wir beibehalten? Was wollen wir anders machen?", "responsible": "deciderGroup", "done": true },
+          { "text": "Ziele und Meilensteine der naechsten 4 Wochen definieren", "responsible": "deciderGroup", "done": true }
+        ],
+        "feedback": {
+          "questions": [
+            "Wie sieht der Newbie im Onboarding?",
+            "Was wollen wir beibehalten? Was wollen wir anders machen?",
+            "Was sind die Ziele und Meilensteine der naechsten 4 Wochen?"
+          ],
+          "responses": [
+            { "from": "emp-002", "summary": "Markus zeigt hohe Motivation und stellt gute Fragen. Ziel: Eigenstaendige Bearbeitung kleiner Tickets bis Woche 6." },
+            { "from": "emp-005", "summary": "Technische Grundlagen sind solide. Pair-Programming mit David empfohlen." }
+          ]
+        },
+        "notes": "Positive erste Wochen. Markus hat sich gut eingelebt und zeigt Eigeninitiative."
+      },
+      {
+        "id": "phase-3",
+        "name": "Check-in kultureller Lotse",
+        "shortName": "Check-in 3W",
+        "timing": "3 Wochen",
+        "week": 3,
+        "status": "completed",
+        "completedDate": "2024-09-20",
+        "description": "Kultureller Lotse (Recruiting) checkt nach 3 Wochen ein – mit Team und ohne Newbie. Fragebogen wird rausgeschickt.",
+        "activities": [
+          { "text": "Gespraech mit Newbie: Wie laeuft das Onboarding?", "responsible": "kulturLotse", "done": true },
+          { "text": "Wie laeuft es im Team? Fuehlst du dich wohl?", "responsible": "kulturLotse", "done": true },
+          { "text": "Wie kommst du bei Seibert zurecht?", "responsible": "kulturLotse", "done": true },
+          { "text": "Check mit Team (ohne Newbie): Wo steht der Newbie?", "responsible": "kulturLotse", "done": true },
+          { "text": "Fragebogen rausschicken", "responsible": "kulturLotse", "done": true }
+        ],
+        "feedback": {
+          "questions": [
+            "Wie laeuft das Onboarding?",
+            "Wie laeuft es im Team? Fuehlst du dich wohl?",
+            "Wie kommst du bei Seibert zurecht?",
+            "Wo steht der Newbie? (Team-Feedback)"
+          ],
+          "responses": [
+            { "from": "emp-004", "summary": "Fuehle mich sehr wohl im Team. Onboarding-Plan hilft gut bei der Orientierung. Wuensche mir mehr Pair-Programming." },
+            { "from": "emp-001", "summary": "Markus integriert sich gut, fragt aktiv nach und uebernimmt erste kleine Aufgaben eigenstaendig." },
+            { "from": "emp-007", "summary": "Gute Fortschritte bei den technischen Basics. Braucht noch Unterstuetzung bei der Architektur." }
+          ]
+        },
+        "notes": "Team-Feedback ist durchweg positiv. Markus fuehlt sich wohl. Empfehlung: Mehr Pair-Programming einplanen."
+      },
+      {
+        "id": "phase-4",
+        "name": "1. IFC mit Decider Group",
+        "shortName": "1. IFC",
+        "timing": "2 Monate",
+        "week": 8,
+        "status": "in-progress",
+        "dueDate": "2024-11-01",
+        "description": "Erstes individuelles Feedbackgespraech (IFC) mit Decider Group und kulturellem Lotsen (Recruiting).",
+        "activities": [
+          { "text": "Ziele und Meilensteine der naechsten 4 Wochen besprechen", "responsible": "deciderGroup", "done": false },
+          { "text": "Einchecken: Gibt es aktuelle Blocker?", "responsible": "kulturLotse", "done": false },
+          { "text": "Rueckblick auf bisherige Ziele", "responsible": "deciderGroup", "done": false },
+          { "text": "Kultureller Lotse checkt mit Team und ohne Newbie ein", "responsible": "kulturLotse", "done": false },
+          { "text": "Fragebogen rausschicken", "responsible": "kulturLotse", "done": false }
+        ],
+        "feedback": {
+          "questions": [
+            "Was sind die Ziele und Meilensteine der naechsten 4 Wochen?",
+            "Gibt es aktuelle Blocker?",
+            "Wo steht der Newbie? (Team-Feedback)"
+          ],
+          "responses": []
+        },
+        "notes": ""
+      },
+      {
+        "id": "phase-5",
+        "name": "Review mit fachlichem Lotsen",
+        "shortName": "Review 3M",
+        "timing": "3 Monate",
+        "week": 12,
+        "status": "upcoming",
+        "dueDate": "2024-12-01",
+        "description": "Fachliches Review mit dem fachlichen Lotsen. Standortbestimmung der technischen Entwicklung.",
+        "activities": [
+          { "text": "Wie sieht der Newbie im Onboarding? (fachliche Sicht)", "responsible": "fachLotse", "done": false },
+          { "text": "Was wollen wir beibehalten? Was wollen wir anders machen?", "responsible": "fachLotse", "done": false },
+          { "text": "Ziele und Meilensteine der naechsten 4 Wochen", "responsible": "fachLotse", "done": false }
+        ],
+        "feedback": {
+          "questions": [
+            "Fachliche Standortbestimmung",
+            "Was wollen wir beibehalten? Was anders machen?",
+            "Ziele und Meilensteine der naechsten 4 Wochen"
+          ],
+          "responses": []
+        },
+        "notes": ""
+      },
+      {
+        "id": "phase-6",
+        "name": "2. IFC mit Decider Group",
+        "shortName": "2. IFC",
+        "timing": "4 Monate",
+        "week": 16,
+        "status": "upcoming",
+        "dueDate": "2025-01-01",
+        "description": "Zweites IFC mit Decider Group und kulturellem Lotsen. Decider Group gibt aktuelle Einschaetzung ab (Onboarding-Nachfrage wird von Recruiting begleitet).",
+        "activities": [
+          { "text": "Wo steht der Newbie? Feedback einholen", "responsible": "kulturLotse", "done": false },
+          { "text": "Einchecken: Gibt es aktuelle Blocker?", "responsible": "kulturLotse", "done": false },
+          { "text": "Ziele und Meilensteine der naechsten 4 Wochen", "responsible": "deciderGroup", "done": false },
+          { "text": "Kultureller Lotse checkt mit Team und ohne Newbie ein", "responsible": "kulturLotse", "done": false },
+          { "text": "Fragebogen rausschicken", "responsible": "kulturLotse", "done": false },
+          { "text": "Decider Group gibt aktuelle Einschaetzung ab", "responsible": "deciderGroup", "done": false }
+        ],
+        "feedback": {
+          "questions": [
+            "Wo steht der Newbie?",
+            "Gibt es aktuelle Blocker?",
+            "Ziele und Meilensteine der naechsten 4 Wochen",
+            "Einschaetzung Decider Group"
+          ],
+          "responses": []
+        },
+        "notes": ""
+      },
+      {
+        "id": "phase-7",
+        "name": "Review mit fachlichem Lotsen",
+        "shortName": "Review 5M",
+        "timing": "5 Monate",
+        "week": 20,
+        "status": "upcoming",
+        "dueDate": "2025-02-01",
+        "description": "Finales fachliches Review. Finale Entscheidung ueber langfristige Rollenbesetzung (RS).",
+        "activities": [
+          { "text": "Finales fachliches Review", "responsible": "fachLotse", "done": false },
+          { "text": "Ziele und Meilensteine besprechen", "responsible": "fachLotse", "done": false },
+          { "text": "Finale Entscheidung: langfristige RS", "responsible": "deciderGroup", "done": false },
+          { "text": "Jira-Ticket fuer langfristige RS erstellen", "responsible": "personal", "done": false }
+        ],
+        "feedback": {
+          "questions": [
+            "Finales fachliches Review",
+            "Empfehlung: langfristige Rollenbesetzung?"
+          ],
+          "responses": []
+        },
+        "notes": ""
+      },
+      {
+        "id": "phase-8",
+        "name": "Abschlussgespraech",
+        "shortName": "Abschluss",
+        "timing": "~21 Wochen",
+        "week": 21,
+        "status": "upcoming",
+        "dueDate": "2025-02-15",
+        "description": "Formeller Abschluss des Onboarding-Prozesses. Rueckblick und Ausblick.",
+        "activities": [
+          { "text": "Abschlussgespraech mit allen Beteiligten", "responsible": "personal", "done": false },
+          { "text": "Rueckblick: Was lief gut, was kann verbessert werden?", "responsible": "personal", "done": false },
+          { "text": "Onboarding-Prozess formal abschliessen", "responsible": "personal", "done": false }
+        ],
+        "feedback": {
+          "questions": [
+            "Rueckblick auf den gesamten Onboarding-Prozess",
+            "Was lief gut? Was kann verbessert werden?"
+          ],
+          "responses": []
+        },
+        "notes": ""
+      }
+    ],
+    "continuousActivity": "Eigenstaendiges Lernen des Newbies mit Hilfe des Onboardingplans"
+  }
+]

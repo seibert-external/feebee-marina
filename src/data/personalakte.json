@@ -1,0 +1,179 @@
+[
+  {
+    "id": "pa-001",
+    "employeeId": "emp-001",
+    "status": "aktiv",
+    "anstellungsart": "Festanstellung",
+    "vertrag": "Vollzeit",
+    "startDate": "2022-03-15",
+    "endDate": null,
+    "fuehrungskraft": "emp-002",
+    "fachLotse": "emp-007",
+    "avTicket": "HR-1023",
+    "jobTicket": "JOB-2201",
+    "studiTicket": null,
+    "unternehmenszugehoerigkeit": "seibert.group",
+    "disziplinarischeEreignisse": [],
+    "timeline": [
+      { "id": "tl-001-1", "date": "2022-03-15", "type": "start", "title": "Erster Arbeitstag", "description": "Anna Müller hat ihre Stelle als Senior Software Engineer angetreten.", "automated": false },
+      { "id": "tl-001-2", "date": "2022-03-15", "type": "automation", "title": "Onboarding gestartet", "description": "Flugplan automatisch angelegt. Benachrichtigung an Führungskraft Thomas Weber versendet.", "automated": true },
+      { "id": "tl-001-3", "date": "2022-04-01", "type": "automation", "title": "Logbuch-Eintrag erstellt", "description": "Foto und Profil im Logbuch hinterlegt. Mantra-Profilcheck angefragt.", "automated": true },
+      { "id": "tl-001-4", "date": "2022-06-15", "type": "milestone", "title": "Probezeit bestanden", "description": "Probezeit erfolgreich abgeschlossen. Jubiläumsliste aktualisiert.", "automated": false },
+      { "id": "tl-001-5", "date": "2023-01-10", "type": "gehalt", "title": "Gehaltsanpassung", "description": "Jahresgespräch: Gehaltserhöhung auf Basis Performancebewertung.", "automated": false, "linkedTicket": "HR-2456" },
+      { "id": "tl-001-6", "date": "2024-03-15", "type": "milestone", "title": "2 Jahre Jubiläum", "description": "Zwei Jahre bei der Seibert Group.", "automated": true },
+      { "id": "tl-001-7", "date": "2025-01-15", "type": "feedback", "title": "Jahresfeedback 2024", "description": "360°-Feedbackprozess abgeschlossen.", "automated": false, "linkedProcess": "proc-002" }
+    ]
+  },
+  {
+    "id": "pa-002",
+    "employeeId": "emp-002",
+    "status": "aktiv",
+    "anstellungsart": "Festanstellung",
+    "vertrag": "Vollzeit",
+    "startDate": "2020-01-10",
+    "endDate": null,
+    "fuehrungskraft": "emp-005",
+    "fachLotse": "emp-005",
+    "avTicket": "HR-0812",
+    "jobTicket": "JOB-1102",
+    "studiTicket": null,
+    "unternehmenszugehoerigkeit": "seibert.group",
+    "disziplinarischeEreignisse": [
+      {
+        "id": "dis-002-1",
+        "date": "2021-09-14",
+        "typ": "leistungsgespraech",
+        "titel": "Leistungsgespräch – Kommunikationsverhalten",
+        "beschreibung": "Im Rahmen des Quartals-Reviews wurde ein klärendes Gespräch zu wiederholt späten Projekt-Updates geführt. Thomas Weber hat die Rückmeldung konstruktiv aufgenommen und konkrete Maßnahmen vereinbart.",
+        "vereinbarungen": "Wöchentliche kurze Status-Updates im Teamchat. Wiedervorlagedatum: 2021-12-14.",
+        "hrVerantwortlich": "emp-008",
+        "erledigt": true,
+        "linkedTicket": "HR-1601"
+      }
+    ],
+    "timeline": [
+      { "id": "tl-002-1", "date": "2020-01-10", "type": "start", "title": "Erster Arbeitstag", "description": "Thomas Weber hat seine Stelle als Engineering Manager angetreten.", "automated": false },
+      { "id": "tl-002-2", "date": "2020-01-10", "type": "automation", "title": "Onboarding gestartet", "description": "Flugplan automatisch angelegt.", "automated": true },
+      { "id": "tl-002-3", "date": "2020-06-10", "type": "milestone", "title": "Probezeit bestanden", "description": "Probezeit erfolgreich abgeschlossen.", "automated": false },
+      { "id": "tl-002-4", "date": "2022-04-01", "type": "funktionswechsel", "title": "Beförderung zum Engineering Manager", "description": "Funktionswechsel von Senior Developer zu Engineering Manager.", "automated": false, "linkedTicket": "HR-1890" },
+      { "id": "tl-002-5", "date": "2025-01-20", "type": "feedback", "title": "Jahresfeedback 2024", "description": "Feedbackprozess als Führungskraft abgeschlossen.", "automated": false, "linkedProcess": "proc-002" }
+    ]
+  },
+  {
+    "id": "pa-003",
+    "employeeId": "emp-003",
+    "status": "aktiv",
+    "anstellungsart": "Festanstellung",
+    "vertrag": "Teilzeit",
+    "startDate": "2023-06-01",
+    "endDate": null,
+    "fuehrungskraft": "emp-005",
+    "fachLotse": "emp-002",
+    "avTicket": "HR-2134",
+    "jobTicket": "JOB-3301",
+    "studiTicket": null,
+    "unternehmenszugehoerigkeit": "seibert.group",
+    "disziplinarischeEreignisse": [],
+    "timeline": [
+      { "id": "tl-003-1", "date": "2023-06-01", "type": "start", "title": "Erster Arbeitstag", "description": "Lisa Schmidt hat ihre Stelle als Product Designer angetreten.", "automated": false },
+      { "id": "tl-003-2", "date": "2023-06-01", "type": "automation", "title": "Onboarding gestartet", "description": "Flugplan angelegt, Führungskraft benachrichtigt.", "automated": true },
+      { "id": "tl-003-3", "date": "2023-12-01", "type": "milestone", "title": "Probezeit bestanden", "description": "Probezeit erfolgreich abgeschlossen.", "automated": false },
+      { "id": "tl-003-4", "date": "2024-10-01", "type": "sonstiges", "title": "Elternzeit beantragt", "description": "Lisa Schmidt hat Elternzeit ab Januar 2025 beantragt.", "automated": false, "linkedTicket": "HR-4521" }
+    ]
+  },
+  {
+    "id": "pa-004",
+    "employeeId": "emp-004",
+    "status": "onboarding",
+    "anstellungsart": "Festanstellung",
+    "vertrag": "Vollzeit",
+    "startDate": "2024-09-01",
+    "endDate": null,
+    "fuehrungskraft": "emp-002",
+    "fachLotse": "emp-001",
+    "avTicket": "HR-4892",
+    "jobTicket": "JOB-5510",
+    "studiTicket": null,
+    "unternehmenszugehoerigkeit": "seibert.group",
+    "disziplinarischeEreignisse": [],
+    "timeline": [
+      { "id": "tl-004-1", "date": "2024-08-15", "type": "preboarding", "title": "Vertrag unterzeichnet", "description": "Markus Braun hat den Arbeitsvertrag unterzeichnet. Preboarding gestartet.", "automated": false },
+      { "id": "tl-004-2", "date": "2024-08-15", "type": "automation", "title": "Preboarding-Automationen gestartet", "description": "Flugplan angelegt. Führungskraft Thomas Weber benachrichtigt. Fachlichen Einarbeitungsplan angefragt.", "automated": true },
+      { "id": "tl-004-3", "date": "2024-09-01", "type": "start", "title": "Erster Arbeitstag", "description": "Markus Braun hat seine Stelle als Junior Developer angetreten.", "automated": false },
+      { "id": "tl-004-4", "date": "2024-09-01", "type": "automation", "title": "Onboarding-Dokumente versendet", "description": "Onboardingdokumente automatisch versendet. Stundenbuchung für ersten Tag aufgefüllt.", "automated": true },
+      { "id": "tl-004-5", "date": "2024-09-08", "type": "automation", "title": "Logbuch-Foto angefragt", "description": "Automatische Nachricht an Markus Braun: Foto für Logbuch und Mantra-Profil.", "automated": true }
+    ],
+    "upcomingAutomations": [
+      { "id": "ua-004-1", "dueDate": "2024-11-01", "title": "Stundenbuchung prüfen", "description": "Nach 8 Wochen: Stundenbuchung in Personio prüfen.", "status": "pending" },
+      { "id": "ua-004-2", "dueDate": "2025-03-01", "title": "Probezeit-Ende", "description": "Probezeitgespräch vorbereiten. Jubiläumsliste aktualisieren.", "status": "pending" },
+      { "id": "ua-004-3", "dueDate": "2025-09-01", "title": "1 Jahr Jubiläum – Bewerberprozess-Feedback", "description": "Nachricht an MA: Feedback zum Bewerbungsprozess anfragen.", "status": "pending" }
+    ]
+  },
+  {
+    "id": "pa-005",
+    "employeeId": "emp-005",
+    "status": "aktiv",
+    "anstellungsart": "Festanstellung",
+    "vertrag": "Vollzeit",
+    "startDate": "2019-05-20",
+    "endDate": null,
+    "fuehrungskraft": null,
+    "fachLotse": null,
+    "avTicket": "HR-0201",
+    "jobTicket": "JOB-0301",
+    "studiTicket": null,
+    "unternehmenszugehoerigkeit": "seibert.group",
+    "disziplinarischeEreignisse": [],
+    "timeline": [
+      { "id": "tl-005-1", "date": "2019-05-20", "type": "start", "title": "Erster Arbeitstag", "description": "Sandra Klein hat ihre Stelle als VP of Engineering angetreten.", "automated": false },
+      { "id": "tl-005-2", "date": "2021-01-01", "type": "funktionswechsel", "title": "Beförderung zur VP of Engineering", "description": "Übernahme der VP-Rolle.", "automated": false, "linkedTicket": "HR-1234" },
+      { "id": "tl-005-3", "date": "2024-05-20", "type": "milestone", "title": "5 Jahre Jubiläum", "description": "Fünf Jahre bei der Seibert Group.", "automated": true }
+    ]
+  },
+  {
+    "id": "pa-006",
+    "employeeId": "emp-007",
+    "status": "ruhend",
+    "anstellungsart": "Festanstellung",
+    "vertrag": "Vollzeit",
+    "startDate": "2021-08-01",
+    "endDate": null,
+    "fuehrungskraft": "emp-002",
+    "fachLotse": "emp-001",
+    "avTicket": "HR-1567",
+    "jobTicket": "JOB-2890",
+    "studiTicket": null,
+    "unternehmenszugehoerigkeit": "seibert.group",
+    "ruhendGrund": "Elternzeit",
+    "ruhendBis": "2026-08-01",
+    "disziplinarischeEreignisse": [
+      {
+        "id": "dis-006-1",
+        "date": "2023-03-02",
+        "typ": "verwarnung",
+        "titel": "Verwarnung – Unentschuldigte Fehlzeiten",
+        "beschreibung": "David Hoffmann war an drei aufeinanderfolgenden Tagen (20.–22.02.2023) unentschuldigt abwesend und hat weder Führungskraft noch HR informiert. Nach Klärung des Sachverhalts wurde eine schriftliche Verwarnung ausgesprochen.",
+        "vereinbarungen": "Krankmeldung ab dem ersten Krankheitstag bis spätestens 9 Uhr. Wiederholungsfall führt zur Abmahnung.",
+        "hrVerantwortlich": "emp-008",
+        "erledigt": true,
+        "linkedTicket": "HR-3301"
+      },
+      {
+        "id": "dis-006-2",
+        "date": "2023-11-15",
+        "typ": "abmahnung",
+        "titel": "Abmahnung – Verstoß gegen Vertraulichkeitspflichten",
+        "beschreibung": "David Hoffmann hat interne Projektunterlagen ohne Genehmigung an einen externen Dienstleister weitergegeben. Ein klärendes Gespräch mit HR und Führungskraft fand am 10.11.2023 statt. Die Abmahnung wurde am 15.11.2023 schriftlich zugestellt und ist von David Hoffmann unterschrieben worden.",
+        "vereinbarungen": "Verpflichtung zur Einhaltung der Datenschutz- und Vertraulichkeitsrichtlinien. Erneuter Verstoß kann arbeitsrechtliche Konsequenzen haben.",
+        "hrVerantwortlich": "emp-008",
+        "erledigt": false,
+        "linkedTicket": "HR-3989"
+      }
+    ],
+    "timeline": [
+      { "id": "tl-006-1", "date": "2021-08-01", "type": "start", "title": "Erster Arbeitstag", "description": "David Hoffmann hat seine Stelle als Backend Developer angetreten.", "automated": false },
+      { "id": "tl-006-2", "date": "2022-02-01", "type": "milestone", "title": "Probezeit bestanden", "description": "Probezeit erfolgreich abgeschlossen.", "automated": false },
+      { "id": "tl-006-3", "date": "2025-08-01", "type": "sonstiges", "title": "Elternzeit begonnen", "description": "David Hoffmann ist in Elternzeit gegangen (bis August 2026).", "automated": false, "linkedTicket": "HR-5123" }
+    ]
+  }
+]

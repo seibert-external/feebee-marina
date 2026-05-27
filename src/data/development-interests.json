@@ -1,0 +1,50 @@
+[
+  {
+    "employeeId": "emp-001",
+    "recommendationId": "rec-001",
+    "title": "Leadership-Programm teilnehmen",
+    "category": "Leadership",
+    "requestedDate": "2024-10-20",
+    "status": "requested"
+  },
+  {
+    "employeeId": "emp-001",
+    "recommendationId": "rec-002",
+    "title": "System Design Kurs",
+    "category": "Fachkompetenz",
+    "requestedDate": "2024-10-22",
+    "status": "approved"
+  },
+  {
+    "employeeId": "emp-007",
+    "recommendationId": "rec-005",
+    "title": "AWS Solutions Architect Zertifizierung",
+    "category": "Cloud",
+    "requestedDate": "2024-10-18",
+    "status": "in-progress"
+  },
+  {
+    "employeeId": "emp-006",
+    "recommendationId": "rec-006",
+    "title": "React Advanced Workshop",
+    "category": "Frontend",
+    "requestedDate": "2024-10-25",
+    "status": "requested"
+  },
+  {
+    "employeeId": "emp-004",
+    "recommendationId": "rec-007",
+    "title": "Testing & CI/CD Deep-Dive",
+    "category": "DevOps",
+    "requestedDate": "2024-10-19",
+    "status": "approved"
+  },
+  {
+    "employeeId": "emp-003",
+    "recommendationId": "rec-008",
+    "title": "UX Research Methoden Workshop",
+    "category": "Design",
+    "requestedDate": "2024-10-21",
+    "status": "requested"
+  }
+]

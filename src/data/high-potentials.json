@@ -1,0 +1,26 @@
+[
+  {
+    "employeeId": "emp-001",
+    "score": 4.7,
+    "indicators": [
+      "Durchgehend überdurchschnittliche Peer-Bewertungen (4.6/5)",
+      "Hat eigenständig Architektur-Projekt geleitet",
+      "Mentoring von Junior-Entwicklern",
+      "Hohe Innovationsbereitschaft laut 360°-Feedback"
+    ],
+    "recommendation": "Leadership-Programm Q1 2025. Projektleitung für strategisches Projekt zuweisen.",
+    "identifiedDate": "2024-10-15"
+  },
+  {
+    "employeeId": "emp-007",
+    "score": 4.1,
+    "indicators": [
+      "Konstant gute Backend-Expertise (4.5/5)",
+      "Starke Problemlösungskompetenz",
+      "Wachsende Team-Führungsqualitäten",
+      "Hohes Engagement bei Cross-Team-Projekten"
+    ],
+    "recommendation": "Backend-Lead Position evaluieren. Cloud Architecture Zertifizierung fördern.",
+    "identifiedDate": "2024-10-10"
+  }
+]

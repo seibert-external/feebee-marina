@@ -1,0 +1,154 @@
+[
+  {
+    "id": "scenario-feedback",
+    "title": "Feedback sammeln",
+    "description": "AI-gestützt strukturiertes Feedback geben",
+    "icon": "MessageSquare",
+    "messages": [
+      {
+        "id": "m1",
+        "role": "assistant",
+        "content": "Hallo! Ich helfe dir dabei, strukturiertes Feedback für Markus Braun (Onboarding-Feedback) zu geben. Lass uns Schritt für Schritt vorgehen.\n\nWie würdest du die Teamintegration von Markus bewerten? Erzähl mir einfach frei, was dir auffällt.",
+        "timestamp": "2024-10-20T10:00:00"
+      },
+      {
+        "id": "m2",
+        "role": "user",
+        "content": "Markus ist super nett und kommt mit allen gut klar. Er fragt viel nach, was manchmal etwas viel ist, aber er lernt schnell.",
+        "timestamp": "2024-10-20T10:01:00"
+      },
+      {
+        "id": "m3",
+        "role": "assistant",
+        "content": "Das klingt sehr positiv! Ich höre heraus:\n\n✅ **Stärken**: Gute zwischenmenschliche Fähigkeiten, hohe Lernbereitschaft\n📝 **Entwicklung**: Könnte eigenständiger werden bei der Problemlösung\n\nAuf einer Skala von 1-5, wie würdest du seine Teamintegration bewerten? Ich schlage basierend auf deiner Beschreibung eine **4** vor.",
+        "timestamp": "2024-10-20T10:01:30"
+      },
+      {
+        "id": "m4",
+        "role": "user",
+        "content": "Ja, 4 passt gut. Vielleicht sogar 4.5",
+        "timestamp": "2024-10-20T10:02:00"
+      },
+      {
+        "id": "m5",
+        "role": "assistant",
+        "content": "Perfekt, ich notiere eine **4** (wir runden auf ganze Zahlen). \n\nNun zur fachlichen Einarbeitung: Wie hat sich Markus technisch entwickelt? Kann er schon eigenständig Tasks bearbeiten?",
+        "timestamp": "2024-10-20T10:02:30"
+      },
+      {
+        "id": "m6",
+        "role": "user",
+        "content": "Er kann einfache Features umsetzen, braucht aber bei komplexeren Sachen noch Unterstützung. Sein Code wird aber stetig besser.",
+        "timestamp": "2024-10-20T10:03:00"
+      },
+      {
+        "id": "m7",
+        "role": "assistant",
+        "content": "Verstanden! Das ist für die Onboarding-Phase ein guter Fortschritt.\n\n📊 **Zusammenfassung bisher:**\n- Teamintegration: ⭐⭐⭐⭐ (4/5)\n- Fachliche Einarbeitung: ⭐⭐⭐ (3/5) - vorgeschlagen\n- Stärken: Teamfähigkeit, Lernbereitschaft, positive Einstellung\n- Entwicklung: Eigenständigkeit, komplexe technische Aufgaben\n\nSoll ich das Feedback so ins Formular übertragen? Du kannst danach noch alles anpassen.",
+        "timestamp": "2024-10-20T10:03:30"
+      }
+    ]
+  },
+  {
+    "id": "scenario-development",
+    "title": "Meine Entwicklung",
+    "description": "Erfahre, wie du dich entwickelt hast",
+    "icon": "TrendingUp",
+    "messages": [
+      {
+        "id": "m1",
+        "role": "assistant",
+        "content": "Hallo Anna! Ich habe deine Feedback-Daten der letzten 12 Monate analysiert. Wie kann ich dir helfen?\n\nDu kannst mich zum Beispiel fragen:\n- Wie hat sich meine Kommunikation entwickelt?\n- Was sind meine größten Stärken?\n- Wo sehen andere Verbesserungspotenzial?",
+        "timestamp": "2024-10-20T14:00:00"
+      },
+      {
+        "id": "m2",
+        "role": "user",
+        "content": "Wie hat sich meine Kommunikation entwickelt?",
+        "timestamp": "2024-10-20T14:01:00"
+      },
+      {
+        "id": "m3",
+        "role": "assistant",
+        "content": "Deine Kommunikationsfähigkeiten haben sich deutlich verbessert! 📈\n\n**Kommunikation im Zeitverlauf:**\n- Q1 2024: 3.5/5 → Q3 2024: 4.2/5 → Aktuell: **4.6/5**\n\n**Was deine Kollegen sagen:**\n- \"Bringt immer wertvolle technische Perspektiven ein\" (Lisa, Design)\n- \"Nimmt sich Zeit für Code-Reviews und gibt konstruktives Feedback\" (Julia)\n- \"Hat beim Architektur-Review alle Stakeholder proaktiv einbezogen\" (Sandra)\n\n**Besonders stark:**\n- Technische Kommunikation in Reviews\n- Cross-Team Zusammenarbeit\n- Konstruktives Feedback geben\n\n**Tipp für weiteres Wachstum:**\nDu könntest deine Kommunikations-Skills noch weiter stärken, indem du Tech-Talks oder Lunch-&-Learn-Sessions leitest. Das würde auch dein Leadership-Profil schärfen.",
+        "timestamp": "2024-10-20T14:01:30"
+      },
+      {
+        "id": "m4",
+        "role": "user",
+        "content": "Was sollte ich als nächstes lernen?",
+        "timestamp": "2024-10-20T14:02:00"
+      },
+      {
+        "id": "m5",
+        "role": "assistant",
+        "content": "Basierend auf deinem Feedback und deiner Karriereentwicklung empfehle ich:\n\n🎯 **Top 3 Entwicklungsempfehlungen:**\n\n1. **Leadership & Mentoring** (Hohe Priorität)\n   - Du wirst bereits als informelle Führungskraft wahrgenommen\n   - Nächster Schritt: Formales Leadership-Training\n   - Empfehlung: Seibert Group Leadership-Programm Q1 2025\n\n2. **System Design & Architektur** (Mittlere Priorität)\n   - Deine technischen Skills sind stark auf Implementation-Level\n   - Nächster Schritt: Mehr Architektur-Entscheidungen übernehmen\n   - Empfehlung: AWS Solutions Architect Kurs\n\n3. **Stakeholder Management** (Mittlere Priorität)\n   - Bereits gut in technischer Kommunikation\n   - Nächster Schritt: Stärker mit Product/Business interagieren\n   - Empfehlung: Produktstrategie-Workshop teilnehmen\n\nMöchtest du zu einem dieser Punkte mehr erfahren?",
+        "timestamp": "2024-10-20T14:02:30"
+      }
+    ]
+  },
+  {
+    "id": "scenario-hr-analysis",
+    "title": "HR-Analyse",
+    "description": "Team-Trends und Insights für HR",
+    "icon": "BarChart3",
+    "messages": [
+      {
+        "id": "m1",
+        "role": "assistant",
+        "content": "Hallo Marina! Ich bin dein HR-Analytics-Assistent. Ich kann dir helfen, Trends und Muster in den Feedback-Daten zu erkennen.\n\nWas möchtest du wissen?\n- Team-Stimmung und Trends\n- Entwicklung einzelner Mitarbeiter\n- Abteilungsvergleiche\n- Handlungsempfehlungen",
+        "timestamp": "2024-10-20T15:00:00"
+      },
+      {
+        "id": "m2",
+        "role": "user",
+        "content": "Zeig mir Trends im Engineering-Team",
+        "timestamp": "2024-10-20T15:01:00"
+      },
+      {
+        "id": "m3",
+        "role": "assistant",
+        "content": "Hier ist die Übersicht für das Engineering-Team (6 Mitarbeiter):\n\n📊 **Team-Sentiment: 4.1/5** (↑ 0.3 seit Q2)\n\n**Positive Trends:**\n- Teamzusammenarbeit hat sich um 15% verbessert\n- Code-Qualität-Bewertungen steigen kontinuierlich\n- Wissenstransfer wird als sehr gut bewertet\n\n**Aufmerksamkeitsbereiche:**\n- ⚠️ Work-Life-Balance Bewertungen leicht rückläufig (-0.2)\n- ⚠️ Markus Braun (Onboarding) braucht mehr strukturiertes Mentoring\n- 📋 Julia Fischer hat anstehende Performance Review\n\n**High Potential Alert:**\n- 🌟 Anna Müller wird durchgehend als Leadership-Kandidatin gesehen\n- Empfehlung: Leadership-Programm Einladung bis Ende Q4\n\n**Completion Rates:**\n- Onboarding Feedback: 50% (2/4 abgeschlossen)\n- High Potential Review: 80% (4/5 abgeschlossen)\n- Peer Feedback Q3: 100% ✅",
+        "timestamp": "2024-10-20T15:01:30"
+      },
+      {
+        "id": "m4",
+        "role": "user",
+        "content": "Was sollten wir als nächstes tun?",
+        "timestamp": "2024-10-20T15:02:00"
+      },
+      {
+        "id": "m5",
+        "role": "assistant",
+        "content": "Basierend auf den aktuellen Daten empfehle ich folgende Maßnahmen:\n\n🔴 **Sofort (Diese Woche):**\n1. Erinnerung an Julia Fischer und David Hoffmann - offene Feedback-Anfragen\n2. Performance Review für Julia Fischer finalisieren und starten\n\n🟡 **Kurzfristig (Diesen Monat):**\n3. Anna Müller für Leadership-Programm nominieren\n4. Mentoring-Plan für Markus Braun strukturieren (Buddy-System)\n5. Work-Life-Balance Retrospektive im Engineering-Team anstoßen\n\n🟢 **Mittelfristig (Q1 2025):**\n6. Team-Building-Event für Engineering planen\n7. Cross-funktionales Feedback zwischen Engineering und Design einführen\n8. Karrierepfad-Gespräche für Senior Engineers planen\n\nSoll ich für eine dieser Maßnahmen direkt einen Feedback-Prozess erstellen?",
+        "timestamp": "2024-10-20T15:02:30"
+      }
+    ]
+  },
+  {
+    "id": "scenario-recommendations",
+    "title": "Empfehlungen",
+    "description": "Personalisierte Entwicklungsempfehlungen",
+    "icon": "Lightbulb",
+    "messages": [
+      {
+        "id": "m1",
+        "role": "assistant",
+        "content": "Hallo! Ich kann dir personalisierte Empfehlungen basierend auf deinem Feedback geben. Für wen möchtest du Empfehlungen sehen?",
+        "timestamp": "2024-10-20T16:00:00"
+      },
+      {
+        "id": "m2",
+        "role": "user",
+        "content": "Für das gesamte Engineering Team bitte",
+        "timestamp": "2024-10-20T16:01:00"
+      },
+      {
+        "id": "m3",
+        "role": "assistant",
+        "content": "Hier sind die personalisierten Empfehlungen für das Engineering-Team:\n\n👤 **Anna Müller** (Senior Engineer)\n- 🎯 Leadership-Programm starten\n- 📚 System Design Kurs\n- ⭐ Potenzial: Tech Lead / Engineering Manager\n\n👤 **Thomas Weber** (Engineering Manager)\n- 🎯 Delegation-Workshop\n- 📚 Coaching-Ausbildung\n- ⭐ Stärke: Team-Entwicklung weiter ausbauen\n\n👤 **Markus Braun** (Junior Developer)\n- 🎯 Strukturiertes Mentoring-Programm\n- 📚 Testing & CI/CD Deep-Dive\n- ⭐ Fokus: Eigenständigkeit entwickeln\n\n👤 **Julia Fischer** (Frontend Developer)\n- 🎯 Performance-Ziele klären\n- 📚 Code-Quality Workshop\n- ⭐ Fokus: Deadline-Management\n\n👤 **David Hoffmann** (Backend Developer)\n- 🎯 Cross-Team Projekte\n- 📚 Cloud Architecture Zertifizierung\n- ⭐ Potenzial: Backend-Lead\n\nMöchtest du für einen Mitarbeiter einen konkreten Entwicklungsplan erstellen?",
+        "timestamp": "2024-10-20T16:01:30"
+      }
+    ]
+  }
+]

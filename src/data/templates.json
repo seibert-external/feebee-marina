@@ -1,0 +1,110 @@
+[
+  {
+    "id": "tpl-onboarding",
+    "name": "Onboarding Feedback",
+    "type": "onboarding",
+    "description": "Standard-Vorlage für Onboarding-Feedback nach 30/60/90 Tagen",
+    "aiSuggestionsEnabled": true,
+    "createdAt": "2024-01-15",
+    "updatedAt": "2024-09-20",
+    "questions": [
+      { "id": "q1", "text": "Wie gut hat sich der Mitarbeiter ins Team integriert?", "type": "rating", "category": "Teamwork", "required": true },
+      { "id": "q2", "text": "Wie bewerten Sie die fachliche Einarbeitung?", "type": "rating", "category": "Fachkompetenz", "required": true },
+      { "id": "q3", "text": "Welche Stärken fallen Ihnen besonders auf?", "type": "text", "category": "Stärken", "required": true },
+      { "id": "q4", "text": "In welchen Bereichen sehen Sie Entwicklungspotenzial?", "type": "text", "category": "Entwicklung", "required": true },
+      { "id": "q5", "text": "Kommunikationsfähigkeit", "type": "competency", "category": "Soft Skills", "required": true },
+      { "id": "q6", "text": "Selbstständigkeit", "type": "competency", "category": "Soft Skills", "required": true }
+    ]
+  },
+  {
+    "id": "tpl-high-potential",
+    "name": "High Potential Review",
+    "type": "high-potential",
+    "description": "360°-Feedback für Mitarbeiter mit Führungspotenzial",
+    "aiSuggestionsEnabled": true,
+    "createdAt": "2024-02-01",
+    "updatedAt": "2024-10-05",
+    "questions": [
+      { "id": "q1", "text": "Zeigt der Mitarbeiter Führungsqualitäten?", "type": "rating", "category": "Leadership", "required": true },
+      { "id": "q2", "text": "Wie innovativ ist der Mitarbeiter?", "type": "rating", "category": "Innovation", "required": true },
+      { "id": "q3", "text": "Beschreiben Sie eine Situation, in der Initiative gezeigt wurde.", "type": "text", "category": "Initiative", "required": true },
+      { "id": "q4", "text": "Strategisches Denken", "type": "competency", "category": "Leadership", "required": true },
+      { "id": "q5", "text": "Problemlösungskompetenz", "type": "competency", "category": "Fachkompetenz", "required": true }
+    ]
+  },
+  {
+    "id": "tpl-peer",
+    "name": "Peer Feedback",
+    "type": "peer-feedback",
+    "description": "Gegenseitiges Feedback unter Kolleg*innen",
+    "aiSuggestionsEnabled": true,
+    "createdAt": "2024-03-01",
+    "updatedAt": "2024-08-15",
+    "questions": [
+      { "id": "q1", "text": "Wie zufrieden sind Sie mit der Zusammenarbeit?", "type": "rating", "category": "Teamwork", "required": true },
+      { "id": "q2", "text": "Wie bewerten Sie die Kommunikation?", "type": "rating", "category": "Kommunikation", "required": true },
+      { "id": "q3", "text": "Was schätzen Sie besonders an der Zusammenarbeit?", "type": "text", "category": "Stärken", "required": true },
+      { "id": "q4", "text": "Was könnte verbessert werden?", "type": "text", "category": "Verbesserung", "required": true }
+    ]
+  },
+  {
+    "id": "tpl-performance",
+    "name": "Performance Improvement",
+    "type": "performance-improvement",
+    "description": "Strukturiertes Feedback für Leistungsverbesserung",
+    "aiSuggestionsEnabled": false,
+    "createdAt": "2024-04-01",
+    "updatedAt": "2024-07-20",
+    "questions": [
+      { "id": "q1", "text": "Wie bewerten Sie die aktuelle Leistung?", "type": "rating", "category": "Leistung", "required": true },
+      { "id": "q2", "text": "Werden Deadlines eingehalten?", "type": "rating", "category": "Zuverlässigkeit", "required": true },
+      { "id": "q3", "text": "Konkrete Verbesserungsvorschläge", "type": "text", "category": "Entwicklung", "required": true },
+      { "id": "q4", "text": "Welche Unterstützung wird benötigt?", "type": "text", "category": "Support", "required": true }
+    ]
+  },
+  {
+    "id": "tpl-self-assessment",
+    "name": "Selbsteinschätzung",
+    "type": "self-assessment",
+    "description": "Vorlage für Selbsteinschätzung des Mitarbeiters",
+    "aiSuggestionsEnabled": true,
+    "createdAt": "2024-05-01",
+    "updatedAt": "2024-10-01",
+    "questions": [
+      { "id": "q1", "text": "Wie bewerten Sie Ihre eigene Leistung in den letzten Monaten?", "type": "rating", "category": "Selbstbild", "required": true },
+      { "id": "q2", "text": "Welche Ihrer Stärken konnten Sie besonders einsetzen?", "type": "text", "category": "Stärken", "required": true },
+      { "id": "q3", "text": "In welchen Bereichen möchten Sie sich weiterentwickeln?", "type": "text", "category": "Entwicklung", "required": true },
+      { "id": "q4", "text": "Teamwork & Zusammenarbeit", "type": "competency", "category": "Soft Skills", "required": true },
+      { "id": "q5", "text": "Fachliche Kompetenz", "type": "competency", "category": "Fachkompetenz", "required": true },
+      { "id": "q6", "text": "Was benötigen Sie, um Ihre Ziele zu erreichen?", "type": "text", "category": "Support", "required": true }
+    ]
+  },
+  {
+    "id": "tpl-short-feedback",
+    "name": "Kurzfeedback",
+    "type": "short-feedback",
+    "description": "Kurzes Feedback unter Kolleg*innen (3 Fragen)",
+    "aiSuggestionsEnabled": false,
+    "createdAt": "2024-06-01",
+    "updatedAt": "2024-06-01",
+    "questions": [
+      { "id": "q1", "text": "Wie bewerten Sie die Zusammenarbeit?", "type": "rating", "category": "Teamwork", "required": true },
+      { "id": "q2", "text": "Was lief besonders gut?", "type": "text", "category": "Stärken", "required": true },
+      { "id": "q3", "text": "Was könnte besser laufen?", "type": "text", "category": "Verbesserung", "required": false }
+    ]
+  },
+  {
+    "id": "tpl-proactive",
+    "name": "Proaktives Feedback",
+    "type": "proactive",
+    "description": "Spontanes positives Feedback an Kolleg*innen",
+    "aiSuggestionsEnabled": false,
+    "createdAt": "2024-06-15",
+    "updatedAt": "2024-06-15",
+    "questions": [
+      { "id": "q1", "text": "Was ist Ihnen positiv aufgefallen?", "type": "text", "category": "Lob", "required": true },
+      { "id": "q2", "text": "In welchem Kontext (Projekt, Meeting, etc.)?", "type": "text", "category": "Kontext", "required": false },
+      { "id": "q3", "text": "Gesamtbewertung", "type": "rating", "category": "Bewertung", "required": true }
+    ]
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "proc-001",
+    "title": "Onboarding Feedback - Markus Braun",
+    "type": "onboarding",
+    "status": "active",
+    "targetEmployee": "emp-004",
+    "participants": ["emp-001", "emp-002", "emp-006", "emp-007"],
+    "startDate": "2024-10-01",
+    "endDate": "2024-12-31",
+    "completedCount": 2,
+    "totalCount": 4,
+    "aiSummary": "Markus zeigt starke technische Grundlagen und hohe Lernbereitschaft. Die Teamintegration verläuft positiv. Empfehlung: Mehr Pair-Programming-Sessions und ein dedizierter Mentor für Code-Reviews.",
+    "questions": [
+      { "id": "q1", "text": "Wie gut hat sich der Mitarbeiter ins Team integriert?", "type": "rating", "category": "Teamwork", "required": true },
+      { "id": "q2", "text": "Wie bewerten Sie die fachliche Einarbeitung?", "type": "rating", "category": "Fachkompetenz", "required": true },
+      { "id": "q3", "text": "Welche Stärken fallen Ihnen besonders auf?", "type": "text", "category": "Stärken", "required": true },
+      { "id": "q4", "text": "In welchen Bereichen sehen Sie Entwicklungspotenzial?", "type": "text", "category": "Entwicklung", "required": true },
+      { "id": "q5", "text": "Kommunikationsfähigkeit", "type": "competency", "category": "Soft Skills", "required": true },
+      { "id": "q6", "text": "Selbstständigkeit", "type": "competency", "category": "Soft Skills", "required": true }
+    ]
+  },
+  {
+    "id": "proc-002",
+    "title": "High Potential Review - Anna Müller",
+    "type": "high-potential",
+    "status": "active",
+    "targetEmployee": "emp-001",
+    "participants": ["emp-002", "emp-003", "emp-005", "emp-006", "emp-007"],
+    "startDate": "2024-09-15",
+    "endDate": "2024-11-30",
+    "completedCount": 4,
+    "totalCount": 5,
+    "aiSummary": "Anna wird durchgehend als technisch exzellent und teamorientiert beschrieben. Führungsqualitäten zeigen sich bereits im Mentoring junger Kollegen. Empfehlung: Leadership-Programm und Projektverantwortung für Q1 2025.",
+    "questions": [
+      { "id": "q1", "text": "Zeigt der Mitarbeiter Führungsqualitäten?", "type": "rating", "category": "Leadership", "required": true },
+      { "id": "q2", "text": "Wie innovativ ist der Mitarbeiter?", "type": "rating", "category": "Innovation", "required": true },
+      { "id": "q3", "text": "Beschreiben Sie eine Situation, in der der Mitarbeiter Initiative gezeigt hat.", "type": "text", "category": "Initiative", "required": true },
+      { "id": "q4", "text": "Strategisches Denken", "type": "competency", "category": "Leadership", "required": true },
+      { "id": "q5", "text": "Problemlösungskompetenz", "type": "competency", "category": "Fachkompetenz", "required": true }
+    ]
+  },
+  {
+    "id": "proc-003",
+    "title": "Peer Feedback - Engineering Team Q4",
+    "type": "peer-feedback",
+    "status": "completed",
+    "targetEmployee": "emp-002",
+    "participants": ["emp-001", "emp-004", "emp-006", "emp-007"],
+    "startDate": "2024-07-01",
+    "endDate": "2024-09-30",
+    "completedCount": 4,
+    "totalCount": 4,
+    "aiSummary": "Thomas wird als unterstützender und kompetenter Manager wahrgenommen. Besonders hervorgehoben werden seine klare Kommunikation und sein Engagement für die Entwicklung des Teams. Verbesserungspotenzial bei der Delegation von Aufgaben.",
+    "questions": [
+      { "id": "q1", "text": "Wie zufrieden sind Sie mit der Zusammenarbeit?", "type": "rating", "category": "Teamwork", "required": true },
+      { "id": "q2", "text": "Wie bewerten Sie die Kommunikation?", "type": "rating", "category": "Kommunikation", "required": true },
+      { "id": "q3", "text": "Was schätzen Sie besonders an der Zusammenarbeit?", "type": "text", "category": "Stärken", "required": true },
+      { "id": "q4", "text": "Was könnte verbessert werden?", "type": "text", "category": "Verbesserung", "required": true }
+    ]
+  },
+  {
+    "id": "proc-004",
+    "title": "Performance Review - Julia Fischer",
+    "type": "performance-improvement",
+    "status": "draft",
+    "targetEmployee": "emp-006",
+    "participants": ["emp-002", "emp-001"],
+    "startDate": "2025-01-15",
+    "endDate": "2025-03-15",
+    "completedCount": 0,
+    "totalCount": 2,
+    "questions": [
+      { "id": "q1", "text": "Wie bewerten Sie die Codequalität?", "type": "rating", "category": "Fachkompetenz", "required": true },
+      { "id": "q2", "text": "Werden Deadlines eingehalten?", "type": "rating", "category": "Zuverlässigkeit", "required": true },
+      { "id": "q3", "text": "Konkrete Verbesserungsvorschläge", "type": "text", "category": "Entwicklung", "required": true }
+    ]
+  }
+]

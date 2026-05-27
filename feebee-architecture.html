@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FeeBee - Architektur-Übersicht</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f8fafb;
+    padding: 40px;
+    color: #1a2b2e;
+  }
+  h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #02464B;
+    margin-bottom: 6px;
+  }
+  .subtitle {
+    text-align: center;
+    color: #6b7b80;
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  /* Layout */
+  .diagram {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* Role sections */
+  .role-section {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  .role-column {
+    flex: 1;
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 2px solid #e2e8ec;
+  }
+  .role-column.hr { border-color: #02464B; }
+  .role-column.employee { border-color: #0891b2; }
+  .role-column.shared { border-color: #7c3aed; }
+
+  .role-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f0f2f4;
+  }
+  .role-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .role-badge.hr { background: #02464B; color: white; }
+  .role-badge.employee { background: #0891b2; color: white; }
+  .role-badge.shared { background: #7c3aed; color: white; }
+  .role-header h2 { font-size: 18px; }
+
+  /* Page cards */
+  .page-card {
+    background: #f8fafb;
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    border-left: 4px solid #ccd5d8;
+    transition: all 0.2s;
+  }
+  .role-column.hr .page-card { border-left-color: #02464B; }
+  .role-column.employee .page-card { border-left-color: #0891b2; }
+  .role-column.shared .page-card { border-left-color: #7c3aed; }
+
+  .page-card .page-name {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+  .page-card .page-route {
+    font-size: 11px;
+    color: #6b7b80;
+    font-family: 'SF Mono', Monaco, monospace;
+  }
+  .page-card .page-desc {
+    font-size: 12px;
+    color: #4a5a5e;
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+  .ai-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    color: white;
+    font-size: 9px;
+    padding: 2px 6px;
+    border-radius: 8px;
+    font-weight: 700;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  /* Flow section */
+  .flow-section {
+    background: white;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 2px solid #e2e8ec;
+    margin-bottom: 30px;
+  }
+  .flow-section h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #02464B;
+  }
+
+  /* Workflow arrows */
+  .workflow {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    overflow-x: auto;
+    padding: 10px 0;
+  }
+  .workflow-step {
+    flex: 1;
+    min-width: 160px;
+    text-align: center;
+    position: relative;
+  }
+  .step-box {
+    background: white;
+    border: 2px solid #e2e8ec;
+    border-radius: 12px;
+    padding: 14px 10px;
+    margin: 0 8px;
+    position: relative;
+    z-index: 1;
+  }
+  .step-box.hr-step { border-color: #02464B; background: #f0fafb; }
+  .step-box.emp-step { border-color: #0891b2; background: #f0f9ff; }
+  .step-box.ai-step { border-color: #7c3aed; background: #faf5ff; }
+
+  .step-number {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #02464B;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6px;
+  }
+  .step-box.emp-step .step-number { background: #0891b2; }
+  .step-box.ai-step .step-number { background: #7c3aed; }
+
+  .step-title {
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+  .step-detail {
+    font-size: 11px;
+    color: #6b7b80;
+    line-height: 1.3;
+  }
+  .step-role {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+  .step-role.hr-label { color: #02464B; }
+  .step-role.emp-label { color: #0891b2; }
+
+  /* Arrow between steps */
+  .workflow-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #02464B;
+    z-index: 2;
+  }
+
+  /* Data flow */
+  .data-flow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .data-node {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: #f8fafb;
+    border-radius: 8px;
+  }
+  .data-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+  .data-icon.source { background: #e0f7fa; }
+  .data-icon.target { background: #fce4ec; }
+  .data-label { font-size: 12px; font-weight: 600; }
+  .data-sub { font-size: 11px; color: #6b7b80; }
+
+  /* Connection diagram */
+  .connection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .conn-box {
+    text-align: center;
+    padding: 16px 10px;
+    border-radius: 12px;
+    border: 2px solid #e2e8ec;
+    background: white;
+    position: relative;
+  }
+  .conn-box .conn-title {
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+  .conn-box .conn-route {
+    font-size: 10px;
+    color: #6b7b80;
+    font-family: monospace;
+  }
+  .conn-box.highlight {
+    border-color: #02464B;
+    background: #f0fafb;
+  }
+
+  /* Legend */
+  .legend {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 30px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #4a5a5e;
+  }
+  .legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+  }
+  .legend-dot.hr { background: #02464B; }
+  .legend-dot.emp { background: #0891b2; }
+  .legend-dot.shared { background: #7c3aed; }
+  .legend-dot.ai { background: linear-gradient(135deg, #7c3aed, #ec4899); }
+
+  /* Dependency Map */
+  .dep-map {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .dep-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .dep-from, .dep-to {
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .dep-from { background: #02464B; color: white; min-width: 140px; text-align: center; }
+  .dep-from.emp { background: #0891b2; }
+  .dep-arrow {
+    color: #aab5b8;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .dep-to {
+    background: #f0f2f4;
+    color: #1a2b2e;
+  }
+  .dep-targets {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  /* Central hub diagram */
+  .hub-diagram {
+    position: relative;
+    height: 500px;
+    margin: 20px 0;
+  }
+  .hub-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #02464B, #0891b2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    z-index: 10;
+    box-shadow: 0 8px 30px rgba(2,70,75,0.3);
+  }
+  .hub-center small {
+    font-size: 10px;
+    font-weight: 400;
+    opacity: 0.8;
+    margin-top: 2px;
+  }
+
+  .hub-node {
+    position: absolute;
+    width: 130px;
+    text-align: center;
+    z-index: 5;
+  }
+  .hub-node-inner {
+    background: white;
+    border: 2px solid #e2e8ec;
+    border-radius: 12px;
+    padding: 12px 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .hub-node-inner.hr-node { border-color: #02464B; }
+  .hub-node-inner.emp-node { border-color: #0891b2; }
+  .hub-node-inner.shared-node { border-color: #7c3aed; }
+
+  .hub-node .hub-title {
+    font-weight: 700;
+    font-size: 11px;
+    margin-bottom: 2px;
+  }
+  .hub-node .hub-sub {
+    font-size: 9px;
+    color: #6b7b80;
+    font-family: monospace;
+  }
+
+  /* SVG lines */
+  .hub-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  /* Two column layout for bottom */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+</style>
+</head>
+<body>
+
+<h1>FeeBee - Architektur-Übersicht</h1>
+<p class="subtitle">Clickable Prototype v2.0 | HR Feedback Tool | Seibert Group</p>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot hr"></div> HR-Ansicht</div>
+  <div class="legend-item"><div class="legend-dot emp"></div> Mitarbeiter-Ansicht</div>
+  <div class="legend-item"><div class="legend-dot shared"></div> Gemeinsam</div>
+  <div class="legend-item"><div class="legend-dot ai"></div> FeeBee AI</div>
+</div>
+
+<div class="diagram">
+
+  <!-- Seitenübersicht -->
+  <div class="role-section">
+    <div class="role-column hr">
+      <div class="role-header">
+        <span class="role-badge hr">HR</span>
+        <h2>HR-Ansicht</h2>
+      </div>
+      <div class="page-card">
+        <div class="page-name">Dashboard <span class="ai-badge">AI</span></div>
+        <div class="page-route">/</div>
+        <div class="page-desc">Alerts, Talent-Radar, aktive Prozesse, Freigaben, Skill-Gaps</div>
+      </div>
+      <div class="page-card">
+        <div class="page-name">Feedback-Prozesse</div>
+        <div class="page-route">/processes</div>
+        <div class="page-desc">Tabelle aller Prozesse mit Suche & Filter</div>
+      </div>
+      <div class="page-card">
+        <div class="page-name">Prozessdetail <span class="ai-badge">AI</span></div>
+        <div class="page-route">/processes/[id]</div>
+        <div class="page-desc">Freigabe-Workflow, AI-Einschätzung, Teilnehmer-Status</div>
+      </div>
+      <div class="page-card">
+        <div class="page-name">Neuer Prozess <span class="ai-badge">AI</span></div>
+        <div class="page-route">/processes/new</div>
+        <div class="page-desc">6-Schritte-Wizard mit AI-Fragenvorschlägen</div>
+      </div>
+      <div class="page-card">
+        <div class="page-name">Vorlagen</div>
+        <div class="page-route">/templates</div>
+        <div class="page-desc">Fragebogen-Vorlagen verwalten</div>
+      </div>
+      <div class="page-card">
+        <div class="page-name">Vorlagen-Editor <span class="ai-badge">AI</span></div>
+        <div class="page-route">/templates/[id]</div>
+        <div class="page-desc">Fragen bearbeiten mit AI-Sidebar</div>
+      </div>
+      <div class="page-card">
+        <div class="page-name">Zyklisches Feedback <span class="ai-badge">AI</span></div>
+        <div class="page-route">/cyclic</div>
+        <div class="page-desc">Team-Rotation, Jahresplan, AI-Jahresbericht</div>
+      </div>
+      <div class="page-card">
+        <div class="page-name">Skillübersicht <span class="ai-badge">AI</span></div>
+        <div class="page-route">/skills</div>
+        <div class="page-desc">Skill-Map, Gaps, AI-Expert-Matching</div>
+      </div>
+      <div class="page-card">
+        <div class="page-name">Analytics <span class="ai-badge">AI</span></div>
+        <div class="page-route">/analytics</div>
+        <div class="page-desc">Charts, Trends, Sentiment, AI-Insights</div>
+      </div>
+    </div>
+
+    <div class="role-column employee">
+      <div class="role-header">
+        <span class="role-badge employee">Mitarbeiter</span>
+        <h2>Mitarbeiter-Ansicht</h2>
+      </div>
+      <div class="page-card">
+        <div class="page-name">Dashboard</div>
+        <div class="page-route">/</div>
+        <div class="page-desc">Offene Anfragen, erhaltenes Feedback, Top-Kompetenzen</div>
+      </div>
+      <div class="page-card">
+        <div class="page-name">Mein Feedback</div>
+        <div class="page-route">/feedback</div>
+        <div class="page-desc">Übersicht: offen, gegeben, erhalten</div>
+      </div>
+      <div class="page-card">
+        <div class="page-name">Feedback geben</div>
+        <div class="page-route">/feedback/give/[id]</div>
+        <div class="page-desc">Fragebogen mit Sternbewertung & Freitext</div>
+      </div>
+      <div class="page-card">
+        <div class="page-name">Feedback-Ergebnisse</div>
+        <div class="page-route">/feedback/results/[id]</div>
+        <div class="page-desc">Anonyme Nur-Lese-Ansicht</div>
+      </div>
+      <div class="page-card">
+        <div class="page-name">Peer Feedback</div>
+        <div class="page-route">/peer-feedback</div>
+        <div class="page-desc">Spontanes Feedback geben/anfragen/erhalten</div>
+      </div>
+      <div class="page-card">
+        <div class="page-name">Meine Entwicklung <span class="ai-badge">AI</span></div>
+        <div class="page-route">/development</div>
+        <div class="page-desc">Radar-Chart, Selbst-/Fremdvergleich, AI-Empfehlungen, Timeline</div>
+      </div>
+
+      <div style="margin-top: 24px; padding-top: 16px; border-top: 2px solid #f0f2f4;">
+        <div class="role-header" style="border-bottom: none; padding-bottom: 0;">
+          <span class="role-badge shared">Gemeinsam</span>
+          <h2>Beide Rollen</h2>
+        </div>
+        <div class="page-card" style="border-left-color: #7c3aed;">
+          <div class="page-name">AI-Assistent <span class="ai-badge">AI</span></div>
+          <div class="page-route">/chat</div>
+          <div class="page-desc">Simulierter KI-Chat mit 4 Szenarien</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kern-Workflow -->
+  <div class="flow-section">
+    <h2>Kern-Workflow: Feedback-Lifecycle</h2>
+    <div class="workflow">
+      <div class="workflow-step">
+        <div class="step-box hr-step">
+          <div class="step-number">1</div>
+          <div class="step-role hr-label">HR</div>
+          <div class="step-title">Prozess erstellen</div>
+          <div class="step-detail">Vorlage wählen, Mitarbeiter & Teilnehmer zuweisen, AI konfigurieren</div>
+        </div>
+      </div>
+      <div class="workflow-step">
+        <div class="step-box emp-step">
+          <div class="step-number">2</div>
+          <div class="step-role emp-label">Mitarbeiter</div>
+          <div class="step-title">Feedback geben</div>
+          <div class="step-detail">Fragebogen ausfüllen, optional AI-Assistent nutzen</div>
+        </div>
+      </div>
+      <div class="workflow-step">
+        <div class="step-box ai-step">
+          <div class="step-number">3</div>
+          <div class="step-role" style="color: #7c3aed;">FeeBee AI</div>
+          <div class="step-title">AI-Einschätzung</div>
+          <div class="step-detail">Sentiment-Analyse, Collaboration-Score, Vergleich</div>
+        </div>
+      </div>
+      <div class="workflow-step">
+        <div class="step-box hr-step">
+          <div class="step-number">4</div>
+          <div class="step-role hr-label">HR</div>
+          <div class="step-title">Prüfen & Freigeben</div>
+          <div class="step-detail">AI-Einschätzung sichten, einzeln oder alle freigeben</div>
+        </div>
+      </div>
+      <div class="workflow-step">
+        <div class="step-box emp-step">
+          <div class="step-number">5</div>
+          <div class="step-role emp-label">Mitarbeiter</div>
+          <div class="step-title">Ergebnis sehen</div>
+          <div class="step-detail">Anonymes Feedback, fließt in Entwicklungsseite</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Peer Feedback Flow -->
+  <div class="flow-section">
+    <h2>Kern-Workflow: Peer Feedback</h2>
+    <div class="workflow">
+      <div class="workflow-step">
+        <div class="step-box emp-step">
+          <div class="step-number">1</div>
+          <div class="step-role emp-label">Mitarbeiter</div>
+          <div class="step-title">Peer Feedback geben</div>
+          <div class="step-detail">Spontanes Feedback mit Sichtbarkeits-Wahl</div>
+        </div>
+      </div>
+      <div class="workflow-step">
+        <div class="step-box" style="border-color: #f59e0b; background: #fffbeb;">
+          <div class="step-number" style="background: #f59e0b;">?</div>
+          <div class="step-title">Sichtbarkeit</div>
+          <div class="step-detail" style="font-weight: 600;">"Direkt teilen" ODER "HR einbeziehen"</div>
+        </div>
+      </div>
+      <div class="workflow-step">
+        <div class="step-box hr-step" style="opacity: 0.6;">
+          <div class="step-number">2a</div>
+          <div class="step-role hr-label">HR (optional)</div>
+          <div class="step-title">Freigabe</div>
+          <div class="step-detail">Nur wenn "HR einbeziehen" gewählt</div>
+        </div>
+      </div>
+      <div class="workflow-step">
+        <div class="step-box emp-step">
+          <div class="step-number">3</div>
+          <div class="step-role emp-label">Empfänger</div>
+          <div class="step-title">Feedback erhalten</div>
+          <div class="step-detail">Erscheint im Dashboard</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Datenfluss -->
+  <div class="flow-section">
+    <h2>Datenfluss & Abhängigkeiten</h2>
+
+    <div class="dep-map">
+      <div class="dep-row">
+        <div class="dep-from">Vorlagen</div>
+        <div class="dep-arrow">&#10132;</div>
+        <div class="dep-targets">
+          <div class="dep-to">Neuer Prozess</div>
+          <div class="dep-to">Zyklisches Feedback</div>
+        </div>
+      </div>
+      <div class="dep-row">
+        <div class="dep-from">Prozesse</div>
+        <div class="dep-arrow">&#10132;</div>
+        <div class="dep-targets">
+          <div class="dep-to">Feedback-Anfragen (MA)</div>
+          <div class="dep-to">HR-Dashboard</div>
+        </div>
+      </div>
+      <div class="dep-row">
+        <div class="dep-from emp">Feedback geben</div>
+        <div class="dep-arrow">&#10132;</div>
+        <div class="dep-targets">
+          <div class="dep-to">Prozessdetail (HR)</div>
+          <div class="dep-to">HR-Freigabe</div>
+        </div>
+      </div>
+      <div class="dep-row">
+        <div class="dep-from" style="background: #059669;">Freigegebenes FB</div>
+        <div class="dep-arrow">&#10132;</div>
+        <div class="dep-targets">
+          <div class="dep-to">Ergebnisse (MA)</div>
+          <div class="dep-to">Entwicklung (MA)</div>
+          <div class="dep-to">Analytics (HR)</div>
+        </div>
+      </div>
+      <div class="dep-row">
+        <div class="dep-from emp">Interesse bekunden</div>
+        <div class="dep-arrow">&#10132;</div>
+        <div class="dep-targets">
+          <div class="dep-to">Skillübersicht (HR)</div>
+          <div class="dep-to">AI-Expert-Matching</div>
+        </div>
+      </div>
+      <div class="dep-row">
+        <div class="dep-from">Zyklisches FB</div>
+        <div class="dep-arrow">&#10132;</div>
+        <div class="dep-targets">
+          <div class="dep-to">Erzeugt regelmäßige Prozesse</div>
+        </div>
+      </div>
+      <div class="dep-row">
+        <div class="dep-from" style="background: linear-gradient(135deg, #7c3aed, #ec4899);">FeeBee AI</div>
+        <div class="dep-arrow">&#10132;</div>
+        <div class="dep-targets">
+          <div class="dep-to">Alerts (HR)</div>
+          <div class="dep-to">Einschätzung (HR)</div>
+          <div class="dep-to">Empfehlungen (MA)</div>
+          <div class="dep-to">Expert-Matching</div>
+          <div class="dep-to">Trends</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HR-Freigabe als zentrales Konzept -->
+  <div class="flow-section" style="border-color: #02464B; background: linear-gradient(135deg, #f0fafb, #fff);">
+    <h2>Zentrales Konzept: HR-Freigabe als Gatekeeper</h2>
+    <div style="display: flex; align-items: center; gap: 30px; padding: 10px 0;">
+      <div style="flex: 1; text-align: center;">
+        <div style="background: #fee2e2; border: 2px solid #fca5a5; border-radius: 12px; padding: 16px;">
+          <div style="font-size: 24px; margin-bottom: 4px;">&#128274;</div>
+          <div style="font-weight: 700; font-size: 14px; color: #dc2626;">Gesperrt</div>
+          <div style="font-size: 11px; color: #6b7b80; margin-top: 4px;">Feedback abgegeben, aber noch nicht freigegeben</div>
+        </div>
+      </div>
+      <div style="font-size: 36px; color: #02464B;">&#10132;</div>
+      <div style="flex: 1; text-align: center;">
+        <div style="background: #fef3c7; border: 2px solid #fcd34d; border-radius: 12px; padding: 16px;">
+          <div style="font-size: 24px; margin-bottom: 4px;">&#128269;</div>
+          <div style="font-weight: 700; font-size: 14px; color: #d97706;">HR prüft</div>
+          <div style="font-size: 11px; color: #6b7b80; margin-top: 4px;">AI-Einschätzung sichten, Kontext bewerten</div>
+        </div>
+      </div>
+      <div style="font-size: 36px; color: #02464B;">&#10132;</div>
+      <div style="flex: 1; text-align: center;">
+        <div style="background: #dcfce7; border: 2px solid #86efac; border-radius: 12px; padding: 16px;">
+          <div style="font-size: 24px; margin-bottom: 4px;">&#9989;</div>
+          <div style="font-weight: 700; font-size: 14px; color: #16a34a;">Sichtbar</div>
+          <div style="font-size: 11px; color: #6b7b80; margin-top: 4px;">Mitarbeiter kann Feedback anonym einsehen</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

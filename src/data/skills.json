@@ -1,0 +1,186 @@
+{
+  "skills": [
+    { "id": "skill-react", "name": "React / Frontend", "category": "Fachkompetenz" },
+    { "id": "skill-backend", "name": "Backend / Node.js", "category": "Fachkompetenz" },
+    { "id": "skill-cloud", "name": "Cloud / AWS", "category": "Fachkompetenz" },
+    { "id": "skill-sysdesign", "name": "System Design", "category": "Fachkompetenz" },
+    { "id": "skill-testing", "name": "Testing / CI-CD", "category": "Fachkompetenz" },
+    { "id": "skill-ux-design", "name": "UX Design", "category": "Design" },
+    { "id": "skill-ux-research", "name": "UX Research", "category": "Design" },
+    { "id": "skill-leadership", "name": "Leadership", "category": "Soft Skills" },
+    { "id": "skill-kommunikation", "name": "Kommunikation", "category": "Soft Skills" },
+    { "id": "skill-agile", "name": "Agile / Scrum", "category": "Soft Skills" },
+    { "id": "skill-mentoring", "name": "Mentoring", "category": "Soft Skills" },
+    { "id": "skill-hr", "name": "HR Management", "category": "Management" }
+  ],
+  "employeeSkills": [
+    {
+      "employeeId": "emp-001",
+      "skills": [
+        { "skillId": "skill-react", "level": 5 },
+        { "skillId": "skill-backend", "level": 4 },
+        { "skillId": "skill-sysdesign", "level": 4 },
+        { "skillId": "skill-testing", "level": 3 },
+        { "skillId": "skill-agile", "level": 4 },
+        { "skillId": "skill-kommunikation", "level": 3 },
+        { "skillId": "skill-mentoring", "level": 3 }
+      ]
+    },
+    {
+      "employeeId": "emp-002",
+      "skills": [
+        { "skillId": "skill-leadership", "level": 5 },
+        { "skillId": "skill-sysdesign", "level": 5 },
+        { "skillId": "skill-agile", "level": 5 },
+        { "skillId": "skill-kommunikation", "level": 4 },
+        { "skillId": "skill-mentoring", "level": 4 },
+        { "skillId": "skill-backend", "level": 3 },
+        { "skillId": "skill-react", "level": 3 }
+      ]
+    },
+    {
+      "employeeId": "emp-003",
+      "skills": [
+        { "skillId": "skill-ux-design", "level": 5 },
+        { "skillId": "skill-ux-research", "level": 4 },
+        { "skillId": "skill-kommunikation", "level": 4 },
+        { "skillId": "skill-agile", "level": 3 },
+        { "skillId": "skill-react", "level": 2 }
+      ]
+    },
+    {
+      "employeeId": "emp-004",
+      "skills": [
+        { "skillId": "skill-react", "level": 2 },
+        { "skillId": "skill-backend", "level": 2 },
+        { "skillId": "skill-testing", "level": 2 },
+        { "skillId": "skill-agile", "level": 3 }
+      ]
+    },
+    {
+      "employeeId": "emp-005",
+      "skills": [
+        { "skillId": "skill-leadership", "level": 5 },
+        { "skillId": "skill-sysdesign", "level": 4 },
+        { "skillId": "skill-agile", "level": 5 },
+        { "skillId": "skill-kommunikation", "level": 5 },
+        { "skillId": "skill-mentoring", "level": 5 },
+        { "skillId": "skill-cloud", "level": 3 },
+        { "skillId": "skill-backend", "level": 3 }
+      ]
+    },
+    {
+      "employeeId": "emp-006",
+      "skills": [
+        { "skillId": "skill-react", "level": 4 },
+        { "skillId": "skill-testing", "level": 3 },
+        { "skillId": "skill-agile", "level": 4 },
+        { "skillId": "skill-cloud", "level": 2 }
+      ]
+    },
+    {
+      "employeeId": "emp-007",
+      "skills": [
+        { "skillId": "skill-backend", "level": 5 },
+        { "skillId": "skill-cloud", "level": 3 },
+        { "skillId": "skill-testing", "level": 4 },
+        { "skillId": "skill-sysdesign", "level": 3 },
+        { "skillId": "skill-agile", "level": 4 },
+        { "skillId": "skill-react", "level": 2 }
+      ]
+    },
+    {
+      "employeeId": "emp-008",
+      "skills": [
+        { "skillId": "skill-hr", "level": 5 },
+        { "skillId": "skill-kommunikation", "level": 5 },
+        { "skillId": "skill-leadership", "level": 4 },
+        { "skillId": "skill-mentoring", "level": 4 },
+        { "skillId": "skill-agile", "level": 4 }
+      ]
+    }
+  ],
+  "aiExpertMatching": [
+    {
+      "developmentInterestId": "rec-001",
+      "employeeId": "emp-001",
+      "skill": "Leadership",
+      "experts": [
+        {
+          "expertId": "emp-002",
+          "reason": "Erfahrener Engineering Manager mit 4+ Jahren Fuehrungserfahrung und exzellentem Team-Feedback",
+          "matchScore": 95
+        },
+        {
+          "expertId": "emp-005",
+          "reason": "VP of Engineering mit starker strategischer Fuehrungskompetenz und Mentoring-Track-Record",
+          "matchScore": 88
+        }
+      ]
+    },
+    {
+      "developmentInterestId": "rec-002",
+      "employeeId": "emp-001",
+      "skill": "System Design",
+      "experts": [
+        {
+          "expertId": "emp-002",
+          "reason": "Level-5 System Design Expertise mit Erfahrung in Microservice-Architekturen",
+          "matchScore": 92
+        },
+        {
+          "expertId": "emp-005",
+          "reason": "Breite Architektur-Erfahrung auf VP-Level mit strategischer Perspektive",
+          "matchScore": 85
+        }
+      ]
+    },
+    {
+      "developmentInterestId": "rec-005",
+      "employeeId": "emp-007",
+      "skill": "Cloud / AWS",
+      "experts": [
+        {
+          "expertId": "emp-005",
+          "reason": "Cloud-Erfahrung auf Management-Level mit AWS-Infrastruktur-Kenntnissen",
+          "matchScore": 72
+        }
+      ]
+    },
+    {
+      "developmentInterestId": "rec-006",
+      "employeeId": "emp-006",
+      "skill": "React / Frontend",
+      "experts": [
+        {
+          "expertId": "emp-001",
+          "reason": "Level-5 React-Expertise als Senior Software Engineer mit modernen Frontend-Patterns",
+          "matchScore": 97
+        }
+      ]
+    },
+    {
+      "developmentInterestId": "rec-007",
+      "employeeId": "emp-004",
+      "skill": "Testing / CI-CD",
+      "experts": [
+        {
+          "expertId": "emp-007",
+          "reason": "Level-4 Testing-Expertise mit umfangreicher CI/CD-Pipeline-Erfahrung im Backend",
+          "matchScore": 90
+        },
+        {
+          "expertId": "emp-001",
+          "reason": "Solide Testing-Kenntnisse mit Frontend-Testing-Schwerpunkt (Jest, Cypress)",
+          "matchScore": 78
+        }
+      ]
+    },
+    {
+      "developmentInterestId": "rec-008",
+      "employeeId": "emp-003",
+      "skill": "UX Research",
+      "experts": []
+    }
+  ]
+}

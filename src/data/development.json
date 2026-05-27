@@ -1,0 +1,71 @@
+{
+  "employeeId": "emp-001",
+  "competencies": [
+    { "name": "Technische Expertise", "current": 4.8, "previous": 4.3, "max": 5, "selfAssessment": 4.5 },
+    { "name": "Kommunikation", "current": 4.6, "previous": 3.5, "max": 5, "selfAssessment": 4.0 },
+    { "name": "Leadership", "current": 4.2, "previous": 3.2, "max": 5, "selfAssessment": 3.5 },
+    { "name": "Problemlösung", "current": 4.9, "previous": 4.5, "max": 5, "selfAssessment": 4.5 },
+    { "name": "Teamwork", "current": 4.5, "previous": 4.0, "max": 5, "selfAssessment": 4.2 },
+    { "name": "Innovation", "current": 4.4, "previous": 3.8, "max": 5, "selfAssessment": 3.8 },
+    { "name": "Strategisches Denken", "current": 3.8, "previous": 3.0, "max": 5, "selfAssessment": 3.5 },
+    { "name": "Mentoring", "current": 4.3, "previous": 3.5, "max": 5, "selfAssessment": 3.8 }
+  ],
+  "aiComparisonInsight": "Anna schätzt sich insgesamt bescheidener ein als ihre Kolleg*innen sie bewerten. Besonders bei Leadership (+0.7 Differenz) und Kommunikation (+0.6) unterschätzt sie ihre Fähigkeiten deutlich. Dies ist typisch für High Potentials mit hohem Anspruch an sich selbst. Empfehlung: Im nächsten 1:1 die Diskrepanz besprechen und Annas Selbstvertrauen in Führungsaufgaben stärken. Die hohe Fremdeinschätzung bei Problemlösung (4.9) wird durch Annas Selbsteinschätzung (4.5) weitgehend bestätigt – dies ist eine gesicherte Kernstärke.",
+  "timeline": [
+    { "date": "2024-10-15", "event": "High Potential Review gestartet", "type": "feedback", "details": "360°-Feedback von 5 Kollegen + Selbsteinschätzung" },
+    { "date": "2024-09-20", "event": "AWS Cloud Practitioner bestanden", "type": "training", "details": "Zertifizierung mit 92% bestanden" },
+    { "date": "2024-08-01", "event": "Microservice-Architektur geleitet", "type": "milestone", "details": "Erste Projektleitung für Team von 4 Entwicklern" },
+    { "date": "2024-06-15", "event": "Peer Feedback abgeschlossen", "type": "feedback", "details": "Durchschnitt: 4.3/5 - deutliche Verbesserung" },
+    { "date": "2024-05-01", "event": "Mentoring von Markus begonnen", "type": "milestone", "details": "Buddy-Rolle für neuen Junior Developer" },
+    { "date": "2024-03-15", "event": "React Advanced Workshop", "type": "training", "details": "3-tägiger externer Workshop" },
+    { "date": "2024-01-10", "event": "Jahresziele gesetzt", "type": "goal", "details": "Leadership-Entwicklung, Architektur-Kompetenz, Mentoring" },
+    { "date": "2023-12-01", "event": "Jahres-Feedback abgeschlossen", "type": "feedback", "details": "Durchschnitt: 3.8/5 - Leadership als Entwicklungsfeld identifiziert" }
+  ],
+  "recommendations": [
+    {
+      "id": "rec-001",
+      "title": "Leadership-Programm teilnehmen",
+      "description": "Formales Leadership-Training empfohlen. Du zeigst bereits natürliche Führungsqualitäten - ein strukturiertes Programm wird diese weiter stärken.",
+      "priority": "high",
+      "category": "Leadership",
+      "interested": true
+    },
+    {
+      "id": "rec-002",
+      "title": "System Design vertiefen",
+      "description": "Deine technischen Skills sind exzellent auf Implementation-Level. Der nächste Schritt ist, mehr Architektur-Entscheidungen zu übernehmen.",
+      "priority": "medium",
+      "category": "Fachkompetenz",
+      "interested": true
+    },
+    {
+      "id": "rec-003",
+      "title": "Tech Talks halten",
+      "description": "Teile dein Wissen in regelmäßigen Tech Talks oder Lunch-&-Learn-Sessions. Das stärkt dein Profil und hilft dem Team.",
+      "priority": "medium",
+      "category": "Kommunikation",
+      "interested": false
+    },
+    {
+      "id": "rec-004",
+      "title": "Cross-funktionale Zusammenarbeit",
+      "description": "Baue Beziehungen zu Product und Design weiter aus. Dein technisches Know-how ist in Strategiediskussionen sehr wertvoll.",
+      "priority": "low",
+      "category": "Strategie",
+      "interested": false
+    }
+  ],
+  "strengths": [
+    "Herausragende Problemlösungskompetenz",
+    "Starke technische Expertise",
+    "Konstruktives und hilfreiches Code-Review",
+    "Natürliche Führungsqualitäten",
+    "Hohe Innovationsbereitschaft"
+  ],
+  "developmentAreas": [
+    "Strategisches Denken auf Unternehmensebene",
+    "Delegation und Loslassen können",
+    "Stakeholder-Management mit nicht-technischen Teams",
+    "Präsentationsfähigkeiten für größere Gruppen"
+  ]
+}

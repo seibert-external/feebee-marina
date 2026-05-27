@@ -1,0 +1,62 @@
+[
+  {
+    "id": "pf-001",
+    "fromEmployee": "emp-006",
+    "toEmployee": "emp-001",
+    "templateId": "tpl-proactive",
+    "type": "proactive",
+    "status": "completed",
+    "shareDirectly": true,
+    "message": "Tolles Projekt! Dein Code-Review war extrem hilfreich.",
+    "date": "2024-10-18",
+    "feedback": [
+      { "questionId": "q1", "text": "Anna hat im Sprint Review eine fantastische Architektur-Lösung präsentiert. Ihr Ansatz hat uns 2 Wochen Arbeit gespart!" },
+      { "questionId": "q2", "text": "Microservice-Migration Sprint 42" },
+      { "questionId": "q3", "rating": 5 }
+    ]
+  },
+  {
+    "id": "pf-002",
+    "fromEmployee": "emp-001",
+    "toEmployee": "emp-007",
+    "templateId": "tpl-short-feedback",
+    "type": "request",
+    "status": "pending",
+    "shareDirectly": true,
+    "message": "Hey David, könntest du mir kurz Feedback zu unserer Zusammenarbeit im API-Projekt geben?",
+    "date": "2024-10-20",
+    "feedback": []
+  },
+  {
+    "id": "pf-003",
+    "fromEmployee": "emp-004",
+    "toEmployee": "emp-001",
+    "templateId": "tpl-proactive",
+    "type": "proactive",
+    "status": "completed",
+    "shareDirectly": true,
+    "message": "",
+    "date": "2024-10-15",
+    "feedback": [
+      { "questionId": "q1", "text": "Anna hat sich viel Zeit genommen, mir beim Debugging zu helfen. Sie erklärt Dinge super verständlich!" },
+      { "questionId": "q2", "text": "Onboarding-Phase, Pair Programming" },
+      { "questionId": "q3", "rating": 5 }
+    ]
+  },
+  {
+    "id": "pf-004",
+    "fromEmployee": "emp-003",
+    "toEmployee": "emp-006",
+    "templateId": "tpl-short-feedback",
+    "type": "request",
+    "status": "completed",
+    "shareDirectly": false,
+    "message": "Julia, ich hätte gerne Feedback zu unserer Design-Review Zusammenarbeit.",
+    "date": "2024-10-12",
+    "feedback": [
+      { "questionId": "q1", "rating": 3 },
+      { "questionId": "q2", "text": "Julia bringt gute technische Perspektiven ein, aber die Deadlines sind manchmal eng." },
+      { "questionId": "q3", "text": "Mehr Zeit für Design-Reviews einplanen wäre hilfreich." }
+    ]
+  }
+]

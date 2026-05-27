@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #172B4D;
+  --primary: #02464B;
+  --primary-hover: #013438;
+  --primary-light: #E0F0F1;
+  --primary-lighter: #F0F8F8;
+  --secondary: #0A7075;
+  --secondary-light: #E6F3F3;
+  --accent: #14919B;
+  --success: #36B37E;
+  --warning: #FFAB00;
+  --danger: #FF5630;
+  --neutral-10: #FAFBFC;
+  --neutral-20: #F4F5F7;
+  --neutral-30: #EBECF0;
+  --neutral-40: #DFE1E6;
+  --neutral-100: #7A869A;
+  --neutral-200: #6B778C;
+  --neutral-800: #172B4D;
+  --sidebar-width: 260px;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--neutral-20);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--neutral-20);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--neutral-40);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neutral-100);
+}
+
+/* Chat typing animation */
+@keyframes typing {
+  0%, 60%, 100% { opacity: 0.3; }
+  30% { opacity: 1; }
+}
+.typing-dot:nth-child(1) { animation: typing 1.4s infinite 0s; }
+.typing-dot:nth-child(2) { animation: typing 1.4s infinite 0.2s; }
+.typing-dot:nth-child(3) { animation: typing 1.4s infinite 0.4s; }

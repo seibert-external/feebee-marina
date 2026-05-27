@@ -1,0 +1,46 @@
+[
+  {
+    "id": "warn-001",
+    "processId": "proc-004",
+    "employeeId": "emp-006",
+    "severity": "critical",
+    "message": "Performance-Bewertungen für Julia Fischer zeigen einen negativen Trend. Durchschnittliche Bewertung ist auf 2.3/5 gesunken.",
+    "suggestedAction": "Dringendes 1:1 Gespräch mit Julia Fischer und ihrem Manager Thomas Weber ansetzen.",
+    "actionType": "meeting",
+    "resolved": false,
+    "date": "2024-10-20"
+  },
+  {
+    "id": "warn-002",
+    "processId": "proc-001",
+    "employeeId": "emp-004",
+    "severity": "warning",
+    "message": "Markus Braun zeigt Unsicherheiten bei der Selbstständigkeit (2.8/5). Mentoring-Programm sollte intensiviert werden.",
+    "suggestedAction": "E-Mail an Thomas Weber senden mit Empfehlung für intensiveres Pair-Programming.",
+    "actionType": "email",
+    "resolved": false,
+    "date": "2024-10-18"
+  },
+  {
+    "id": "warn-003",
+    "processId": "proc-003",
+    "employeeId": "emp-002",
+    "severity": "info",
+    "message": "Im Peer Feedback wurde mehrfach erwähnt, dass Thomas Weber Aufgaben besser delegieren sollte.",
+    "suggestedAction": "Jira-Ticket erstellen: Delegation-Workshop für Thomas Weber organisieren.",
+    "actionType": "jira",
+    "resolved": false,
+    "date": "2024-10-15"
+  },
+  {
+    "id": "warn-004",
+    "processId": "proc-002",
+    "employeeId": "emp-007",
+    "severity": "warning",
+    "message": "David Hoffmann hat sein Feedback seit 14 Tagen nicht abgegeben. Deadline nähert sich.",
+    "suggestedAction": "Erinnerungs-E-Mail an David Hoffmann senden.",
+    "actionType": "email",
+    "resolved": false,
+    "date": "2024-10-20"
+  }
+]

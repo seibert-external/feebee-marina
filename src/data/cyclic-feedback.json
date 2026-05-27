@@ -1,0 +1,36 @@
+[
+  {
+    "id": "cyc-001",
+    "teamName": "Engineering Team",
+    "department": "Engineering",
+    "members": ["emp-001", "emp-002", "emp-004", "emp-006", "emp-007"],
+    "frequency": "quarterly",
+    "templateId": "tpl-short-feedback",
+    "startDate": "2024-01-01",
+    "active": true,
+    "yearEndReport": true,
+    "criticalFeedbackAlert": true,
+    "rotationSchedule": [
+      { "month": "Jan", "from": "emp-001", "to": "emp-002" },
+      { "month": "Jan", "from": "emp-002", "to": "emp-004" },
+      { "month": "Jan", "from": "emp-004", "to": "emp-006" },
+      { "month": "Jan", "from": "emp-006", "to": "emp-007" },
+      { "month": "Jan", "from": "emp-007", "to": "emp-001" },
+      { "month": "Apr", "from": "emp-001", "to": "emp-004" },
+      { "month": "Apr", "from": "emp-002", "to": "emp-006" },
+      { "month": "Apr", "from": "emp-004", "to": "emp-007" },
+      { "month": "Apr", "from": "emp-006", "to": "emp-001" },
+      { "month": "Apr", "from": "emp-007", "to": "emp-002" },
+      { "month": "Jul", "from": "emp-001", "to": "emp-006" },
+      { "month": "Jul", "from": "emp-002", "to": "emp-007" },
+      { "month": "Jul", "from": "emp-004", "to": "emp-001" },
+      { "month": "Jul", "from": "emp-006", "to": "emp-002" },
+      { "month": "Jul", "from": "emp-007", "to": "emp-004" },
+      { "month": "Okt", "from": "emp-001", "to": "emp-007" },
+      { "month": "Okt", "from": "emp-002", "to": "emp-001" },
+      { "month": "Okt", "from": "emp-004", "to": "emp-002" },
+      { "month": "Okt", "from": "emp-006", "to": "emp-004" },
+      { "month": "Okt", "from": "emp-007", "to": "emp-006" }
+    ]
+  }
+]

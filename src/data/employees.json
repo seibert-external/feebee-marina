@@ -1,0 +1,82 @@
+[
+  {
+    "id": "emp-001",
+    "name": "Anna Müller",
+    "email": "anna.mueller@seibert.group",
+    "avatar": "AM",
+    "role": "Senior Software Engineer",
+    "department": "Engineering",
+    "manager": "Thomas Weber",
+    "startDate": "2022-03-15"
+  },
+  {
+    "id": "emp-002",
+    "name": "Thomas Weber",
+    "email": "thomas.weber@seibert.group",
+    "avatar": "TW",
+    "role": "Engineering Manager",
+    "department": "Engineering",
+    "manager": "Sandra Klein",
+    "startDate": "2020-01-10"
+  },
+  {
+    "id": "emp-003",
+    "name": "Lisa Schmidt",
+    "email": "lisa.schmidt@seibert.group",
+    "avatar": "LS",
+    "role": "Product Designer",
+    "department": "Design",
+    "manager": "Sandra Klein",
+    "startDate": "2023-06-01"
+  },
+  {
+    "id": "emp-004",
+    "name": "Markus Braun",
+    "email": "markus.braun@seibert.group",
+    "avatar": "MB",
+    "role": "Junior Developer",
+    "department": "Engineering",
+    "manager": "Thomas Weber",
+    "startDate": "2024-09-01"
+  },
+  {
+    "id": "emp-005",
+    "name": "Sandra Klein",
+    "email": "sandra.klein@seibert.group",
+    "avatar": "SK",
+    "role": "VP of Engineering",
+    "department": "Engineering",
+    "manager": "",
+    "startDate": "2019-05-20"
+  },
+  {
+    "id": "emp-006",
+    "name": "Julia Fischer",
+    "email": "julia.fischer@seibert.group",
+    "avatar": "JF",
+    "role": "Frontend Developer",
+    "department": "Engineering",
+    "manager": "Thomas Weber",
+    "startDate": "2023-02-14"
+  },
+  {
+    "id": "emp-007",
+    "name": "David Hoffmann",
+    "email": "david.hoffmann@seibert.group",
+    "avatar": "DH",
+    "role": "Backend Developer",
+    "department": "Engineering",
+    "manager": "Thomas Weber",
+    "startDate": "2021-08-01"
+  },
+  {
+    "id": "emp-008",
+    "name": "Marina Smelkov",
+    "email": "marina.smelkov@seibert.group",
+    "avatar": "MS",
+    "role": "HR Business Partner",
+    "department": "Human Resources",
+    "manager": "",
+    "startDate": "2020-11-15"
+  }
+]
